@@ -1,0 +1,15 @@
+<div class = "products">
+    <button (click) = "discount(999)" (click) = "flag != flag">Хочу скидку!</button>
+    <app-card-block
+    *ngFor="let product of products; let i = index"
+    [id]="product.id"
+    [name]="product.name"
+    [price]= "+product.price"
+    [description]="product.description"
+    [index]="i"
+    [color]="product.color"
+    (onClicked)="descriptionShow($event)"></app-card-block>
+    <p>{{ descr }}</p>
+    <p *ngIf = "flag!">Sale: {{ sale }}</p>
+</div>
+
